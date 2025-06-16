@@ -8,7 +8,7 @@ export default function Desktop() {
     return (
         <>
             <div className="relative w-screen h-screen overflow-hidden flex justif-center">
-                <div className="absolute inset-0 w-[1440px] h-[300px] ">
+                <div className="absolute inset-0 w-full h-[200px] sm:w-[1440px] sm:h-[300px] ">
                     <Image
                         src={"background.svg"}
                         alt="background"
@@ -27,7 +27,12 @@ export default function Desktop() {
                     }}
                 ></div>
 
-                <div className="absolute w-[541px] h-[48px] top-[70px] left-1/2 translate-x-[-50%] flex justify-between items-center z-10">
+                <div
+                    className="absolute 
+                    w-[325px] h-[20px] left-1/2 translate-x-[-50%]
+                    sm:w-[541px] sm:top-[70px] top-[70px] sm:left-1/2 sm:translate-x-[-50%] 
+                    flex justify-between items-center z-10"
+                >
                     <span className="text-white font-['Josefin Sans'] font-bold text-[40px] tracking-[15px]">
                         TODO
                     </span>

@@ -33,12 +33,13 @@ export default function ToDoInput() {
 
     return (
         <>
-            <div className="absolute top-[158px] left-1/2 translate-x-[-50%] flex flex-col gap-y-6  ">
+            <div className="absolute top-[108px] sm:top-[158px] left-1/2 -translate-x-1/2 flex flex-col gap-y-6 items-center w-full">
                 <form
                     onSubmit={addTodo}
                     className=" 
                         flex items-center
-                        w-[540px] h-[64px]
+                        w-[327px] h-[48px]
+                        sm:w-[540px] sm:h-[64px]
                         rounded-md
                         bg-white
                         p-4
@@ -71,7 +72,14 @@ export default function ToDoInput() {
                 </form>
                 <div
                     id="font-custom"
-                    className="bg-white rounded-md shadow-sm w-[540px] h-[auto]"
+                    className="
+                            bg-white 
+                            rounded-md 
+                            shadow-sm 
+                            w-full 
+                            max-w-[327px] sm:max-w-[540px] 
+                            mx-auto 
+                            h-auto"
                 >
                     <ul className="relative divide-y divide-gray-300">
                         {todos.map((todo, index) => (
@@ -84,7 +92,14 @@ export default function ToDoInput() {
                                     className="
                                     relative
                                     peer
-                                    :content-['✔']
+                                    checked:after:content-['✔']
+                                    checked:after:absolute
+                                    checked:after:inset-0
+                                    checked:after:flex
+                                    checked:after:items-center
+                                    checked:after:justify-center
+                                    checked:after:text-white
+                                    checked:after:text-sm
                                     w-[24px] h-[24px]
                                     border-[1px] border-gray-400
                                     rounded-full
